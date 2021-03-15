@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position:sticky;
+  top:0;
+}
+
+.logo {
+  padding: 15px;
+}
+.logo img {
+  height: 3em;
+}
+
+.nav a.link {
+  margin: 0 10px;
+}

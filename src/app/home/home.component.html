@@ -1,0 +1,135 @@
+<header>
+    <app-header></app-header>
+</header>
+<div class="content">
+    <section class="section" *ngFor="let section of sectionData; let i = index">
+        <app-section [index]="i" [heading]="section.heading" [caption]="section.caption"
+            [description]="section.description" [imgSrc]="section.imgSrc" [rtl]="section.rtl"></app-section>
+    </section>
+    <section class="section events">
+        <div class="container">
+            <div class="">
+                <div class="row text-center p-5">
+                    <div class="col-md-12 center-block text-center">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <img data-aos="fade-up" src="../../assets/images/eco.png" style="width:18em">
+                                            <h1 data-aos="fade-up">Buddy</h1>
+                                            <hr style="border-top: 5px solid rgb(138 195 66);width: 14%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>SUP’s Event feature spreads the word about your undying commitment to an eco-friendly
+                                    and sustainable lifestyle and helps you promote and discover eco-events. We have
+                                    curated various earth-friendly events just for you…</p>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section events">
+        <div class="container">
+            <div class="row text-center p-2">
+                <div class="col-md-12 center-block text-center">
+                    <h1>Dive into the world of eco-events</h1>
+                    <hr style="border-top: 5px solid rgb(138 195 66);width: 14%;">
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-3 d-flex align-items-stretch">
+                            <div class="card card-border-color card-border-color-primary">
+                                <div class="card-header card-header-divider">
+                                   <span>Climate Change awareness conferences</span>
+                                </div>
+                                <div class="card-body">
+                                   <p>
+                                    Meet reputed professors, green professionals; and listen to their views about climate change and its impacts. Share your opinion and come back with an enriched mind.
+                                   </p>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="col-lg-3 d-flex align-items-stretch">
+                            <div class="card card-border-color card-border-color-primary">
+                                <div class="card-header card-header-divider">
+                                   <b><span>Earth Day Festivals</span></b>
+                                </div>
+                                <div class="card-body">
+                                   <p>
+                                    Enjoy music, food, and games, but this festival does everything by keeping sustainability in mind. Wake up to a world of fun and awareness, meet other eco-friendly peeps, and watch how the pros do it!!
+                                   </p>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="col-lg-3 d-flex align-items-stretch">
+                            <div class="card card-border-color card-border-color-primary">
+                                <div class="card-header card-header-divider">
+                                   <b><span>Green Carnivals</span></b>
+                                </div>
+                                <div class="card-body">
+                                   <p>
+                                    A carnival just for the eco-friendly individuals who want to learn more about how they can contribute to the GO GREEN movement. Learn from the best in the industry, and connect with like-minded green people!!
+                                   </p>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="col-lg-3 d-flex align-items-stretch">
+                            <div class="card card-border-color card-border-color-primary">
+                                <div class="card-header card-header-divider">
+                                   <b><span>Sustainability workshops and seminars</span></b>
+                                </div>
+                                <div class="card-body">
+                                   <p>
+                                    Attend the coolest educational workshops, and learn more about sustainable lifestyle changes, and what more you can do to save the environment from the hands of climate change.
+                                   </p>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="vertical-center">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <div class="row">
+                            <div class="col-md-12 col-xs-12">
+                                <img src="../../assets/images/sup.png" style="    width: 7em;">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-xs-12">
+                                <h1>Rebels take action. Download the app now.</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-xs-12">
+                                <a href="https://play.google.com/store/apps/details?id=com.krishpa.sup">
+                                    <button style="cursor:pointer; outline: none;background: none;border: 0;">
+                                        <img style="width: 13em;left: 0;position: absolute;"
+                                            src="../../assets/images/google-play-badge.png">
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<footer>
+    <app-footer></app-footer>
+</footer>

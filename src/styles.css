@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "brandon",Helvetica,sans-serif;
+}
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  height:100%;
+  /* margin: auto;
+  padding: 0 5%; */
+}
+
+a {
+  color: #616161;
+  text-decoration: none;
+}

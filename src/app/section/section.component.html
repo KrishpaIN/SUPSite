@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="wrapper">
+    <div class="row" *ngIf="index%2==0">
+      <div class="col-sm-6 col-xs-12 vertical-center">
+        <div class="image">
+          <img [src]="imgSrc" />
+        </div>
+      </div>
+      <div class="col-sm-6 col-xs-12 vertical-center">
+        <div class="content">
+          <h1 class="caption">{{ caption }}</h1>
+          <p class="description" [innerHTML]="description"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="index%2==1">
+      <div class="col-sm-6 col-xs-12 vertical-center">
+        <div class="content">
+          <h1 class="caption">{{ caption }}</h1>
+          <p class="description" [innerHTML]="description"></p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xs-12">
+        <div class="image float-right vertical-center">
+          <img [src]="imgSrc" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

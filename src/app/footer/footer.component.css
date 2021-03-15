@@ -1,0 +1,8 @@
+.links{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+.links link {
+    margin: 0 10px;
+}

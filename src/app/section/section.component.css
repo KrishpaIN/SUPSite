@@ -1,0 +1,77 @@
+@font-face {
+  font-family: brandon;
+  font-size: 900;
+  src: url('../../assets/brandon-regular.woff2');
+}
+h1{
+  font-family:"brandon",Helvetica,sans-serif;
+  font-weight: 1000;
+  color:#28a745;
+}
+p{
+  color:rgb(133, 132, 132);
+}
+.container {
+  display: flex;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+.rtl {
+  flex-direction: row-reverse;
+}
+.image img {
+  max-width: 20rem;
+  height: auto;
+}
+.image::after{
+  content: '';
+  width: 165px;
+  height: 44%;
+  position: absolute;
+  background-image: url('../../assets/images/side.png');
+  background-size: 100px;
+  background-repeat: no-repeat;
+  top: 20em;
+  right: 0rem;
+  z-index: -1;
+}
+.image.float-right img{
+  z-index: 2;
+}
+.image.float-right::after{
+  content: '';
+    width: 165px;
+    height: 44%;
+    position: absolute;
+    background-image: url('../../assets/images/side.png');
+    background-size: 100px;
+    background-repeat: no-repeat;
+    top: 5em;
+    left: 1rem;
+    z-index: 0;
+    transform: rotate(180deg);
+}
+p.description {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper, .rtl {
+    flex-direction: column;
+  }
+  .vertical-center{
+
+  }
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+}
