@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --prod",
+    "build:prod": "ng build --prod --sourceMap=false --base-href /SUPSite/",
     "prod": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
