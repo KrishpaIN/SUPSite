@@ -1,0 +1,21 @@
+section{
+    width:100vw;
+    height:auto;
+}
+.logo{
+    margin-top:5vh;
+    width:13vw;
+}
+.lft{
+    height:1px;
+    float: left;
+}
+section{
+    background-color: #fff !important;
+    text-align: justify;
+}
+@media screen and (max-width: 500px) {
+    p{
+        font-size:16px !important;
+    }
+}

@@ -2,6 +2,8 @@
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 25px;
 }
 .links link {
     margin: 0 10px;

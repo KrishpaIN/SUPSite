@@ -1,0 +1,13 @@
+header {
+    width: 101%;
+    background: white;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+  }
+.margin {
+    margin-top: 110px;
+}
+footer {
+    margin-top: 120px;
+}

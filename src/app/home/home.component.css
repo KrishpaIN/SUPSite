@@ -1,22 +1,7 @@
-@font-face {
-  font-family: brandon;
-  font-size: 900;
-  src: url('../../assets/brandon-regular.woff2');
-}
 h1{
   font-family:"brandon",Helvetica,sans-serif;
   font-weight: 1000;
   color:#8AC342;
-}
-header {
-  width: 101%;
-  background: white;
-  position: fixed;
-  top: 0;
-  z-index: 5;
-}
-.margin {
-  margin-top: 110px;
 }
 .section {
     /* font-size: 300px; */
@@ -31,9 +16,6 @@ header {
 .section .container {
   display: flex;
   justify-content: center;
-}
-footer {
-  margin-top: 120px;
 }
 p{
   color:rgb(133, 132, 132);
