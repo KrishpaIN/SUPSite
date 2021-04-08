@@ -119,7 +119,10 @@ export class HomeComponent implements OnInit {
         title: 'Name',
         text: 'Enter your details to get early Invitation'
       },
-      'Email',
+      {
+        title:'Email',
+        input:'email',
+      }
     ]).then((result) => {
       if (result) {
         const answers = JSON.stringify(result);
