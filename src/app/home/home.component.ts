@@ -1,6 +1,9 @@
 import { AotSummaryResolver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import  AOS  from 'aos';
+import AOS from 'aos';
+import Swal from 'sweetalert2'
+import {SignupService} from '../signup.service';
+
 
 @Component({
   selector: 'app-home',
@@ -35,14 +38,14 @@ export class HomeComponent implements OnInit {
       Click on Join and get ready to have a fun time with SUP!!
       `,
       imgSrc: "assets/images/image4.png",
-      rtl: false      
+      rtl: false
     },
     {
       heading: "",
       caption: "Create Event",
       description: "Now, you can curate your very own Eco-event with SUP!! Grab this exclusive opportunity and let us help you in your journey to sustainability.",
       imgSrc: "assets/images/image5.png",
-      rtl: true      
+      rtl: true
     },
     // {
     //   heading: "",
@@ -52,11 +55,76 @@ export class HomeComponent implements OnInit {
     //   rtl: false      
     // }
   ]
-
-  constructor() { }
+  headerText:string;
+  textArray:Array<string>=[
+                           "Nations First market place for Eco-events!",
+                           "Unlock the treasure trove of the country's finest sustainable products!!",
+                           "Start your Sustainability Journey with Us",
+                           "Explore trendy eco-events and workshops",
+                           "Unlock the treasure trove of the country's finest sustainable products!!",
+                           "Appreciating social change in India",
+                           "Find your eco-friendly FAM here",
+                           "Introducing Eco coins to Appreciate the Eco conscious individual of India!",
+                           "Sign up to be a part of the nation's first eco-platform!!",
+                           "Welcome to the Virtual Flea market for the Eco conscious Indian"
+                          ]
+  constructor(
+    private signup:SignupService,
+  ) { }
 
   ngOnInit(): void {
     AOS.init();
+    this.animateText();
   }
 
+  animateText(){
+    var len = this.textArray.length;
+    var global = this;
+    setInterval(function() {
+      global.headerText = global.textArray[Math.floor(Math.random() * len)];
+      // console.log(global.textArray);
+    }, 2000);
+  }
+  submitDetails(data){
+    var values = JSON.parse(data).value;
+    this.signup.postInvitation(values[0],values[1]).subscribe(x=>{
+      if(x){
+        Swal.fire({
+          icon:'success',
+          title: 'Yayy!! Lead the Change',
+          confirmButtonText: 'Lovely!',
+        })
+      }
+      else{
+        Swal.fire({
+          icon:'error',
+          title: 'Something went wrong',
+          confirmButtonText: 'Sad!',
+        })
+      }
+    });
+  }
+  showModal() {
+    var global = this;
+    Swal.mixin({
+      input: 'text',
+      inputPlaceholder: 'Please enter your details here',
+      confirmButtonText: 'Next',
+      confirmButtonColor: '#218838',
+      showCancelButton: true,
+      progressSteps: ['1', '2'],
+      
+    }).queue([
+      {
+        title: 'Name',
+        text: 'Enter your details to get early Invitation'
+      },
+      'Email',
+    ]).then((result) => {
+      if (result) {
+        const answers = JSON.stringify(result);
+        global.submitDetails(answers);
+      }
+    })
+  }
 }

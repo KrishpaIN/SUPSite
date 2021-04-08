@@ -1,4 +1,22 @@
 <div class="content">
+    <section class="section" style="background-color:#e9fbff;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 col-sm-12">
+                    <div class="row h-100">
+                        <div class="col-md-12 p-5  my-auto">
+                            <h1 class="p-2">Step into the world of climate change action and sustainability with SUP</h1>
+                            <h3 class="p-2">{{headerText}}</h3>
+                            <button (click)="showModal()" class="btn p-3 btn-success">GET AN EARLY INVITATION</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-12 vertical-center">
+                    <img src="../../assets/images/3823344.jpg" class="img img-responsive" width="500">
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="section" *ngFor="let section of sectionData; let i = index">
         <app-section [index]="i" [heading]="section.heading" [caption]="section.caption"
             [description]="section.description" [imgSrc]="section.imgSrc" [rtl]="section.rtl"></app-section>
