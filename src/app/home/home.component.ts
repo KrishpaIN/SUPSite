@@ -58,13 +58,10 @@ export class HomeComponent implements OnInit {
   headerText:string;
   textArray:Array<string>=[
                            "Nations First market place for Eco-events!",
-                           "Unlock the treasure trove of the country's finest sustainable products!!",
                            "Start your Sustainability Journey with Us",
                            "Explore trendy eco-events and workshops",
-                           "Unlock the treasure trove of the country's finest sustainable products!!",
                            "Appreciating social change in India",
                            "Find your eco-friendly FAM here",
-                           "Introducing Eco coins to Appreciate the Eco conscious individual of India!",
                            "Sign up to be a part of the nation's first eco-platform!!",
                            "Welcome to the Virtual Flea market for the Eco conscious Indian"
                           ]
